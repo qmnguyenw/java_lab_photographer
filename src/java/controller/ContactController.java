@@ -13,6 +13,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import dao.CountDAO;
 import dao.PhotoDAO;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -40,9 +41,13 @@ public class ContactController extends HttpServlet {
             request.setAttribute("contact", photoDao.getContact());
             request.setAttribute("active", "4"); 
             //count visit
-            CountDAO countingDAO = new CountDAO();
+            CountDAO countDAO = new CountDAO();
+            HttpSession session = request.getSession();
+            if (session.isNew()) {
+                countDAO.addVisit();
+            }
             //get visit number
-            request.setAttribute("visit", countingDAO.getVisit());
+            request.setAttribute("visit", countDAO.getVisit());
             request.getRequestDispatcher("contact.jsp").forward(request, response);
         } catch (Exception ex) {
             request.setAttribute("error", ex);

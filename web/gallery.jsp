@@ -11,11 +11,44 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link href="./static/css/home.css" rel="stylesheet" type="text/css">
         <link href="./static/css/slide.css" rel="stylesheet" type="text/css"/>
+        <style>
+            
+            /* Slideshow container */
+            .slideshow-container {
+                max-width: 1000px;
+                position: relative;
+                margin: auto;
+            }
+
+            /* Fading animation */
+            .fade {
+                -webkit-animation-name: fade;
+                -webkit-animation-duration: 1.5s;
+                animation-name: fade;
+                animation-duration: 1.5s;
+            }
+
+            @-webkit-keyframes fade {
+                from {opacity: .4} 
+                to {opacity: 1}
+            }
+
+            @keyframes fade {
+                from {opacity: .4} 
+                to {opacity: 1}
+            }
+
+            /* On smaller screens, decrease text size */
+            @media only screen and (max-width: 300px) {
+                .text {font-size: 11px}
+            }
+        </style>
         <title>My Front Page</title>
     </head>
     <body>
         <div class="container">
             <jsp:include page="header.jsp"/>
+            <div class="body-main">
             <div class="main">
                 <div class="left">
                     <div class="about">
@@ -25,7 +58,7 @@
                         <h3 style="margin-bottom: 600px"> ${error}</h3>
                     </c:if>
                     <c:if test="${error == null}">
-                        <c:if test="${top1Gallery.image_url != null && totalRecord > 0 }">
+                        <%--<c:if test="${top1Gallery.image_url != null && totalRecord > 0 }">
                             <div class="imageGaler" id="imageGaler">
                                 <c:set var="k" value="0"/>
                                 <c:set var="cur" value="0"/>
@@ -45,14 +78,20 @@
                                 </c:forEach>                                
                                 <input type="button" value="Play" onclick="clickBtn();" class="playbtn" id="playbtn">
                             </div>
-                        </c:if>
+                        </c:if>--%>
+                        <div class="slideshow-container">
+                        <c:forEach items="${listImage}" var="i" varStatus="loop">
+                            <div class="mySlides fade">
+                                <center><img src="${i.image_url}" style="width:70%; height:70%;"></center>
+                            </div>
+                        </c:forEach>
+                        
+                        </div> 
                         <div class="contentGallery">
-
                             <c:if test="${error == null}">
                                 <%--<c:if test="${index > maxPage || index < 0}">--%>
                                     <!--<h3> Not found this page!!!</h3>-->
                                 <%--</c:if>--%>
-                                    
                                 <ul>
                                     <c:if test="${index <= maxPage}">
                                         <c:forEach items="${listImage}" var="i" varStatus="loop">
@@ -80,12 +119,28 @@
                     <jsp:include page="right.jsp"/>
                 </div>
             </div>
+            </div>
         </div>
         <jsp:include page="footer.jsp"/>
         <script src="js/slide.js" type="text/javascript"></script>
         <script>
-            var slideIndex = ${cur};
+            var slideIndex = 0;
+            var isPlay = true;
             showSlides();
+
+            function showSlides() {
+              var i;
+              var slides = document.getElementsByClassName("mySlides");
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+              }
+              slideIndex++;
+              if (slideIndex > slides.length) {slideIndex = 1}    
+              slides[slideIndex-1].style.display = "block";  
+              setTimeout(showSlides, 5000); // Change image every 5 seconds
+            }
+            
+            
         </script>
     </body>
 </html>

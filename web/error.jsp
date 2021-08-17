@@ -1,17 +1,17 @@
 <%-- 
     Document   : error
-    Created on : Aug 14, 2021, 5:22:18 PM
+    Created on : Aug 14, 2021, 5:22:03 PM
     Author     : Admin
 --%>
-
+<%@ taglib prefix="c"  uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
-        <h1>${error}</h1>
-    </body>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>JSP Page</title>
+  </head>
+  <body>
+    <h1>${error}</h1>
+  </body>
 </html>

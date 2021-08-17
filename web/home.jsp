@@ -16,6 +16,7 @@
     <body>
         <div class="container">
             <jsp:include page="header.jsp"/>
+            <div class="body-main">
             <div class="main">
                 <div class="left">
                     <div class="image">
@@ -73,6 +74,7 @@
                 <div class="right">
                     <jsp:include page="right.jsp"/>
                 </div>
+            </div>
             </div>
         </div>
         <jsp:include page="footer.jsp"/>

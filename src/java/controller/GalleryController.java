@@ -16,6 +16,7 @@ import dao.PhotoDAO;
 import entity.Gallery;
 import entity.Image;
 import java.util.List;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -60,7 +61,7 @@ public class GalleryController extends HttpServlet {
                 index = 1;
             } 
             //count visit
-            CountDAO countingDAO = new CountDAO();
+            CountDAO countDAO = new CountDAO();
             
             //get list image with paging 
             List<Image> imagelList = photoDao.getListImageWithPaging(gallery, index, pageSize);
@@ -91,8 +92,12 @@ public class GalleryController extends HttpServlet {
             //get contact infor
             request.setAttribute("contact", photoDao.getContact());
             request.setAttribute("active", galleryID);
+            HttpSession session = request.getSession();
+            if (session.isNew()) {
+                countDAO.addVisit();
+            }
             //get visit number
-            request.setAttribute("visit", countingDAO.getVisit());
+            request.setAttribute("visit", countDAO.getVisit());
             request.getRequestDispatcher("gallery.jsp").forward(request, response);
         } catch (Exception ex) {
             

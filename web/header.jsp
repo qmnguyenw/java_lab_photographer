@@ -10,6 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
         <link href="./static/css/header.css" rel="stylesheet" type="text/css">
     </head>
     <body>
@@ -27,7 +28,7 @@
         </div>
         <div class="header">
             <div class="header-inner">
-                <div class="img"> </div>
+                <div class="img"><i class="fa fa-camera-retro" style="color: white; font-size: 90px;"></i></div>
                 <!--<img rel="nofollow" src="./images/logo.png"/>-->
                 <div class="title ">
                     PHOTOGRAPHER

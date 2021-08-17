@@ -16,6 +16,7 @@ import dao.CountDAO;
 import dao.PhotoDAO;
 import entity.Gallery;
 import java.util.List;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -65,6 +66,10 @@ public class HomeController extends HttpServlet {
             //get contact infor
             request.setAttribute("contact", photoDao.getContact());
             request.setAttribute("active", "0");
+            HttpSession session = request.getSession();
+            if (session.isNew()) {
+                countDAO.addVisit();
+            }
             //get visit number
             request.setAttribute("visit", countDAO.getVisit());
             request.getRequestDispatcher("home.jsp").forward(request, response);

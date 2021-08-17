@@ -154,8 +154,7 @@ public class PhotoDAO {
         List<Gallery> list = new ArrayList<>();
 //        int size = count();
         try {
-            String query = "SELECT * FROM ( SELECT ROW_NUMBER() OVER (ORDER BY id ASC) AS rn , * FROM  gallery )"
-                    + "AS b WHERE rn BETWEEN ((?*?) - ?) AND (?*?)";
+            String query = "SELECT * FROM ( SELECT ROW_NUMBER() OVER (ORDER BY id ASC) AS rn , * FROM  gallery ) AS b WHERE rn BETWEEN ((?*?) - ?) AND (?*?)";
             conn = db.getConnection();
             pr = conn.prepareStatement(query);
             pr.setInt(1, pageSize);
@@ -237,8 +236,7 @@ public class PhotoDAO {
         List<Image> list = new ArrayList<>();
         int size = countImage(galleryID);
         try {
-            String query = "SELECT * FROM ( SELECT ROW_NUMBER() OVER (ORDER BY id ASC) AS rn , * FROM image WHERE gallery_id = ?) "
-                    + "AS b WHERE rn BETWEEN ((?*?) - ?) AND (?*?)";
+            String query = "SELECT * FROM ( SELECT ROW_NUMBER() OVER (ORDER BY id ASC) AS rn , * FROM image WHERE gallery_id = ?) AS b WHERE rn BETWEEN ((?*?) - ?) AND (?*?)";
             conn = db.getConnection();
             pr = conn.prepareStatement(query);
             pr.setInt(1, galleryID);
