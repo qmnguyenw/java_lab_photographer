@@ -12,6 +12,9 @@
         <link href="./static/css/home.css" rel="stylesheet" type="text/css">
         <link href="./static/css/slide.css" rel="stylesheet" type="text/css"/>
         <style>
+            .mySlides {
+                display: none;
+            }
             
             /* Slideshow container */
             .slideshow-container {
@@ -29,18 +32,13 @@
             }
 
             @-webkit-keyframes fade {
-                from {opacity: .4} 
+                from {opacity: .2} 
                 to {opacity: 1}
             }
 
             @keyframes fade {
-                from {opacity: .4} 
+                from {opacity: .2} 
                 to {opacity: 1}
-            }
-
-            /* On smaller screens, decrease text size */
-            @media only screen and (max-width: 300px) {
-                .text {font-size: 11px}
             }
         </style>
         <title>My Front Page</title>
@@ -58,34 +56,14 @@
                         <h3 style="margin-bottom: 600px"> ${error}</h3>
                     </c:if>
                     <c:if test="${error == null}">
-                        <%--<c:if test="${top1Gallery.image_url != null && totalRecord > 0 }">
-                            <div class="imageGaler" id="imageGaler">
-                                <c:set var="k" value="0"/>
-                                <c:set var="cur" value="0"/>
-                                <c:forEach items="${listImage}" var="i" varStatus="loop">
-                                    <c:if test="${top1Gallery.id == i.id}">
-                                        <c:set var="cur" value="${k}"/>
-                                        <div class="mySlides show-on fadesl">
-                                            <a href="detail?galleryID=${galleryID}&imgID=${i.id}"><img src="${i.image_url}"></a>
-                                        </div>
-                                    </c:if>
-                                    <c:if test="${top1Gallery.id != i.id}">
-                                        <div class="mySlides show-off fadesl">
-                                            <a href="detail?galleryID=${galleryID}&imgID=${i.id}"><img src="${i.image_url}"></a>
-                                        </div>
-                                    </c:if>
-                                    <c:set var="k" value="${k + 1}"/>
-                                </c:forEach>                                
-                                <input type="button" value="Play" onclick="clickBtn();" class="playbtn" id="playbtn">
-                            </div>
-                        </c:if>--%>
                         <div class="slideshow-container">
                         <c:forEach items="${listImage}" var="i" varStatus="loop">
                             <div class="mySlides fade">
-                                <center><img src="${i.image_url}" style="width:70%; height:70%;"></center>
+                                <center><img src="${i.image_url}" style="height: 300px; width: auto;"/></center>
+                                <!--style="width:70%; height:70%;"-->
                             </div>
                         </c:forEach>
-                        
+                        <center><button id="pause" onclick="doSlideshow()"> <i class="fa fa-pause"></i> Pause </button></center>
                         </div> 
                         <div class="contentGallery">
                             <c:if test="${error == null}">
@@ -125,22 +103,42 @@
         <script src="js/slide.js" type="text/javascript"></script>
         <script>
             var slideIndex = 0;
-            var isPlay = true;
-            showSlides();
+            var playing = true;
+            var timer = setInterval(showSlides, 2000); // Change image every 2 seconds
+            var pauseButton = document.getElementById("pause");
 
             function showSlides() {
-              var i;
-              var slides = document.getElementsByClassName("mySlides");
-              for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";  
-              }
-              slideIndex++;
-              if (slideIndex > slides.length) {slideIndex = 1}    
-              slides[slideIndex-1].style.display = "block";  
-              setTimeout(showSlides, 5000); // Change image every 5 seconds
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                for (i = 0; i < slides.length; i++) {
+                  slides[i].style.display = "none";
+                }
+                slideIndex++;
+                if (slideIndex > slides.length) {
+                  slideIndex = 1
+                }
+                slides[slideIndex - 1].style.display = "block";
             }
-            
-            
+
+            function pauseSlideshow() {
+                pauseButton.innerHTML = "<i class=\"fa fa-play\"></i> Play";
+                playing = false;
+                clearInterval(timer);
+            }
+
+            function playSlideshow() {
+                pauseButton.innerHTML = "<i class=\"fa fa-pause\"></i> Pause";
+                playing = true;
+                timer = setInterval(showSlides, 2000);
+            }
+
+            function doSlideshow() {
+                if(playing) {
+                    pauseSlideshow();
+                } else {
+                    playSlideshow();
+                }
+            }
         </script>
     </body>
 </html>

@@ -23,7 +23,7 @@
                         <img src="${contact.image_main}" alt="First">
                     </div>
                     <div class="description">
-                        Lorem ipsum dolor sit amet
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quas distinctio quo, illum sunt debitis odit ullam consequuntur repudiandae dolorum tempora nam beatae officiis possimus voluptatem eligendi placeat. Reiciendis, iste?
                     </div>
                     <div class="content">
                         <c:if test="${error != null}">

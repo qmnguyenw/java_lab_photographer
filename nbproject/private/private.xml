@@ -3,22 +3,9 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/Admin/Downloads/project/Photographer/web/contact.jsp</file>
-            <file>file:/C:/Users/Admin/Downloads/project/Photographer/src/java/dao/PhotoDAO.java</file>
-            <file>file:/C:/Users/Admin/Downloads/project/Photographer/web/gallery.jsp</file>
-            <file>file:/C:/Users/Admin/Downloads/project/Photographer/src/java/controller/GalleryController.java</file>
-            <file>file:/C:/Users/Admin/Downloads/project/Photographer/web/static/css/header.css</file>
-            <file>file:/C:/Users/Admin/Downloads/project/Photographer/web/static/css/slide.css</file>
-            <file>file:/C:/Users/Admin/Downloads/project/Photographer/web/detail.jsp</file>
-            <file>file:/C:/Users/Admin/Downloads/project/Photographer/web/static/css/home.css</file>
             <file>file:/C:/Users/Admin/Downloads/project/Photographer/web/header.jsp</file>
-            <file>file:/C:/Users/Admin/Downloads/project/Photographer/src/java/dao/CountDAO.java</file>
-            <file>file:/C:/Users/Admin/Downloads/project/Photographer/web/footer.jsp</file>
-            <file>file:/C:/Users/Admin/Downloads/project/Photographer/web/static/css/footer.css</file>
-            <file>file:/C:/Users/Admin/Downloads/project/Photographer/web/static/css/right.css</file>
-            <file>file:/C:/Users/Admin/Downloads/project/Photographer/web/right.jsp</file>
-            <file>file:/C:/Users/Admin/Downloads/project/Photographer/web/error.jsp</file>
-            <file>file:/C:/Users/Admin/Downloads/project/Photographer/src/java/controller/ContactController.java</file>
+            <file>file:/C:/Users/Admin/Downloads/project/Photographer/web/WEB-INF/web.xml</file>
+            <file>file:/C:/Users/Admin/Downloads/project/Photographer/web/gallery.jsp</file>
             <file>file:/C:/Users/Admin/Downloads/project/Photographer/web/home.jsp</file>
         </group>
     </open-files>
