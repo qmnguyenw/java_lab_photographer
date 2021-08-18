@@ -34,8 +34,7 @@
                             <c:if test="${index > maxPage}">
                                 <h3> Not found this page!!!</h3>
                             </c:if>
-                            <ul >
-
+                            <ul>
                                 <c:if test="${index <= maxPage}">
                                     <c:forEach items="${listGallery}" var="i" >
                                         <li class="span4">
@@ -48,7 +47,6 @@
                                             <p>${i.description}</p>
                                         </li>
                                     </c:forEach>
-
                                 </c:if>
                             </ul>
 
