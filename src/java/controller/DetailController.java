@@ -66,7 +66,8 @@ public class DetailController extends HttpServlet {
             request.setAttribute("visit", countDAO.getVisit());
             request.getRequestDispatcher("detail.jsp").forward(request, response);
         } catch (Exception ex) {
-
+            request.setAttribute("error", ex);
+            request.getRequestDispatcher("error.jsp").forward(request, response);
         }
     }
 

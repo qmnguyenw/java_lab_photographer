@@ -6,7 +6,7 @@
     width: 100%;*/
 }
 .link {
-  width: 930px;
+  width: 60%;
   margin-left: auto;
   padding: 24px 25px;
   margin-right: auto;
@@ -31,4 +31,10 @@
   font-weight: 700;
   width: auto;
   position: relative;
+}
+
+@media screen and (max-width: 740px) {
+    .link {
+        width: 80%;
+    }
 }

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<!-- saved from url=(0054)http://localhost:8080/Photographer/gallery?galleryID=1 -->
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+    <link href="../static/css/home.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/footer.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/right.css" rel="stylesheet" type="text/css">
+    <link href="../static/css/header.css" rel="stylesheet" type="text/css">
+
+
+    <link href="../static/css/slide.css" rel="stylesheet" type="text/css">
+
+    <style>
+        .mySlides {
+            display: none;
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .2
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .2
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+    </style>
+    <title>My Front Page</title>
+</head>
+
+<body>
+    <div class="container">
+
+
+        <div class="nav">
+            <div class="nav-inner">
+                <ul>
+                    <li> <a class="" href="http://localhost:8080/Photographer/home">My front page</a></li>
+
+                    <li> <a class="activeMenu" href="http://localhost:8080/Photographer/gallery?galleryID=1">Gallery
+                            1</a> </li>
+
+                    <li> <a class="" href="http://localhost:8080/Photographer/gallery?galleryID=2">Gallery 2</a> </li>
+
+                    <li> <a class="" href="http://localhost:8080/Photographer/gallery?galleryID=3">Gallery 3</a> </li>
+
+                    <li> <a class="" href="http://localhost:8080/Photographer/contact">Contact</a> </li>
+                </ul>
+            </div>
+            <div class="nav-container">
+                <div class="nav-btn">
+                    <button onclick="collapseNavbar()" class="dropbtn">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+                <nav id="dropdown-menu" class="nav-mobile">
+                    <div class="nav-mobile-inner">
+                        <ul class="nav-mobile-list">
+                            <li><a class="nav-mobile-link " href="http://localhost:8080/Photographer/home">My front
+                                    page</a></li>
+
+                            <li> <a class="nav-mobile-link activeMenu"
+                                    href="http://localhost:8080/Photographer/gallery?galleryID=1">Gallery 1</a> </li>
+
+                            <li> <a class="nav-mobile-link "
+                                    href="http://localhost:8080/Photographer/gallery?galleryID=2">Gallery 2</a> </li>
+
+                            <li> <a class="nav-mobile-link "
+                                    href="http://localhost:8080/Photographer/gallery?galleryID=3">Gallery 3</a> </li>
+
+                            <li><a class="nav-mobile-link "
+                                    href="http://localhost:8080/Photographer/contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <div class="header">
+            <div class="header-container">
+                <div class="header-inner">
+                    <div class="img"><i class="fa fa-camera-retro"></i></div>
+                    <!--<img rel="nofollow" src="./images/logo.png"/>-->
+                    <div class="title ">
+                        PHOTOGRAPHER
+                    </div>
+                    <div class="subtitle">
+                        Welcome to this website
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function collapseNavbar() {
+                document.getElementById('dropdown-menu').classList.toggle('show');
+            }
+        </script>
+
+
+
+        <div class="body-main">
+            <div class="main">
+                <div class="left">
+                    <div class="about">
+                        <h3>Gallery 1</h3>
+                    </div>
+
+
+                    <div class="slideshow-container">
+
+                        <div class="mySlides fade" style="display: none;">
+                            <center><img src="../static/img/i1.jpg" style="height: 300px; width: auto;"></center>
+                            <!--style="width:70%; height:70%;"-->
+                        </div>
+
+                        <div class="mySlides fade" style="display: none;">
+                            <center><img src="../static/img/i2.jpg" style="height: 300px; width: auto;"></center>
+                            <!--style="width:70%; height:70%;"-->
+                        </div>
+
+                        <div class="mySlides fade" style="display: none;">
+                            <center><img src="../static/img/i3.jpg" style="height: 300px; width: auto;"></center>
+                            <!--style="width:70%; height:70%;"-->
+                        </div>
+
+                        <div class="mySlides fade" style="display: none;">
+                            <center><img src="../static/img/i4.jpg" style="height: 300px; width: auto;"></center>
+                            <!--style="width:70%; height:70%;"-->
+                        </div>
+
+                        <div class="mySlides fade" style="display: none;">
+                            <center><img src="../static/img/i5.jpg" style="height: 300px; width: auto;"></center>
+                            <!--style="width:70%; height:70%;"-->
+                        </div>
+
+                        <div class="mySlides fade" style="display: block;">
+                            <center><img src="../static/img/i6.jpg" style="height: 300px; width: auto;"></center>
+                            <!--style="width:70%; height:70%;"-->
+                        </div>
+
+                        <div class="mySlides fade" style="display: none;">
+                            <center><img src="../static/img/i7.jpg" style="height: 300px; width: auto;"></center>
+                            <!--style="width:70%; height:70%;"-->
+                        </div>
+
+                        <div class="mySlides fade" style="display: none;">
+                            <center><img src="../static/img/i8.jpg" style="height: 300px; width: auto;"></center>
+                            <!--style="width:70%; height:70%;"-->
+                        </div>
+
+                        <center><button id="pause" onclick="doSlideshow()"> <i class="fa fa-pause"></i> Pause </button>
+                        </center>
+                    </div>
+                    <div class="contentGallery">
+
+
+                        <!--<h3> Not found this page!!!</h3>-->
+
+                        <ul>
+
+
+                            <li class="span4">
+                                <a
+                                    href="http://localhost:8080/Photographer/gallery?index=1&amp;galleryID=1&amp;imgID=1"><img
+                                        src="../static/img/i1.jpg"></a>
+                            </li>
+
+                            <li class="span4">
+                                <a
+                                    href="http://localhost:8080/Photographer/gallery?index=1&amp;galleryID=1&amp;imgID=2"><img
+                                        src="../static/img/i2.jpg"></a>
+                            </li>
+
+                            <li class="span4">
+                                <a
+                                    href="http://localhost:8080/Photographer/gallery?index=1&amp;galleryID=1&amp;imgID=3"><img
+                                        src="../static/img/i3.jpg"></a>
+                            </li>
+
+                            <li class="span4">
+                                <a
+                                    href="http://localhost:8080/Photographer/gallery?index=1&amp;galleryID=1&amp;imgID=4"><img
+                                        src="../static/img/i4.jpg"></a>
+                            </li>
+
+                            <li class="span4">
+                                <a
+                                    href="http://localhost:8080/Photographer/gallery?index=1&amp;galleryID=1&amp;imgID=5"><img
+                                        src="../static/img/i5.jpg"></a>
+                            </li>
+
+                            <li class="span4">
+                                <a
+                                    href="http://localhost:8080/Photographer/gallery?index=1&amp;galleryID=1&amp;imgID=6"><img
+                                        src="../static/img/i6.jpg"></a>
+                            </li>
+
+                            <li class="span4">
+                                <a
+                                    href="http://localhost:8080/Photographer/gallery?index=1&amp;galleryID=1&amp;imgID=7"><img
+                                        src="../static/img/i7.jpg"></a>
+                            </li>
+
+                            <li class="span4">
+                                <a
+                                    href="http://localhost:8080/Photographer/gallery?index=1&amp;galleryID=1&amp;imgID=8"><img
+                                        src="../static/img/i8.jpg"></a>
+                            </li>
+
+
+                        </ul>
+
+
+                        <div class="paging">
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="right">
+
+
+
+
+
+
+                    <div class="header-right">
+                        <h4>Share this page</h4>
+                    </div>
+                    <div class="social">
+                        <div>
+                            <ul>
+                                <li>
+                                    <i class="fa fa-facebook-square"
+                                        style="color: white; padding-top: 2px; padding-right: 10px; vertical-align: middle;">
+                                        <a href="https://www.facebook.com/">
+                                            <span> Share on Facebook</span>
+                                        </a> </i>
+                                </li>
+                                <li>
+                                    <i class="fa fa-twitter-square"
+                                        style="color: white; padding-top: 2px; padding-right: 10px; vertical-align: middle;">
+                                        <a href="https://twitter.com/?lang=vi"> <span>Share on Twitter</span> </a></i>
+                                </li>
+                                <li>
+                                    <i class="fa fa-google-plus-square"
+                                        style="color: white; padding-top: 2px; padding-right: 10px; vertical-align: middle;">
+                                        <a href="https://www.google.com/"> <span>Share on Google</span>
+                                        </a> </i>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <div class="footer">
+        <div class="link">
+            <a href="http://localhost:8080/Photographer/gallery?galleryID=1#">Visited </a>
+            <span class="footer-page-counter-item">00043</span>
+        </div>
+
+    </div>
+
+
+
+    <script>
+        var slideIndex = 0;
+        var playing = true;
+        var timer = setInterval(showSlides, 2000); // Change image every 2 seconds
+        var pauseButton = document.getElementById("pause");
+
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+
+        function pauseSlideshow() {
+            pauseButton.innerHTML = "<i class=\"fa fa-play\"></i> Play";
+            playing = false;
+            clearInterval(timer);
+        }
+
+        function playSlideshow() {
+            pauseButton.innerHTML = "<i class=\"fa fa-pause\"></i> Pause";
+            playing = true;
+            timer = setInterval(showSlides, 2000);
+        }
+
+        function doSlideshow() {
+            if (playing) {
+                pauseSlideshow();
+            } else {
+                playSlideshow();
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)http://localhost:8080/Photographer/ -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+        <link href="../static/css/home.css" rel="stylesheet" type="text/css">
+        <title>My Front Page</title>
+    </head>
+    <body>
+        <div class="container">
+            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
+            <link href="../static/css/header.css" rel="stylesheet" type="text/css">
+
+
+            <div class="nav">
+                <div class="nav-inner">
+                    <ul>
+                        <li> <a class="activeMenu" href="http://localhost:8080/Photographer/home">My front page</a></li>
+
+                        <li> <a class="" href="http://localhost:8080/Photographer/gallery?galleryID=1">Gallery 1</a> </li>
+
+                        <li> <a class="" href="http://localhost:8080/Photographer/gallery?galleryID=2">Gallery 2</a> </li>
+
+                        <li> <a class="" href="http://localhost:8080/Photographer/gallery?galleryID=3">Gallery 3</a> </li>
+
+                        <li> <a class="" href="http://localhost:8080/Photographer/contact">Contact</a> </li>
+                    </ul>
+                </div>
+                <div class="nav-container">
+                    <div class="nav-btn">
+                        <button onclick="collapseNavbar()" class="dropbtn">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                    </div>
+                    <nav id="dropdown-menu" class="nav-mobile">
+                        <div class="nav-mobile-inner">
+                            <ul class="nav-mobile-list">
+                                <li><a class="nav-mobile-link activeMenu" href="http://localhost:8080/Photographer/home">My front page</a></li>
+
+                                <li> <a class="nav-mobile-link " href="http://localhost:8080/Photographer/gallery?galleryID=1">Gallery 1</a> </li>
+
+                                <li> <a class="nav-mobile-link " href="http://localhost:8080/Photographer/gallery?galleryID=2">Gallery 2</a> </li>
+
+                                <li> <a class="nav-mobile-link " href="http://localhost:8080/Photographer/gallery?galleryID=3">Gallery 3</a> </li>
+
+                                <li><a class="nav-mobile-link " href="http://localhost:8080/Photographer/contact">Contact</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <div class="header">
+                <div class="header-container">
+                    <div class="header-inner">
+                        <div class="img"><i class="fa fa-camera-retro"></i></div>
+                        <!--<img rel="nofollow" src="./images/logo.png"/>-->
+                        <div class="title ">
+                            PHOTOGRAPHER
+                        </div>
+                        <div class="subtitle">
+                            Welcome to this website
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function collapseNavbar() {
+                    document.getElementById('dropdown-menu').classList.toggle('show');
+                }
+            </script>
+
+
+
+            <div class="body-main">
+                <div class="main">
+                    <div class="left">
+                        <div class="image">
+                            <img src="../static/img/homeImage.jpg" alt="First">
+                        </div>
+                        <div class="description">
+                            <div>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea quas distinctio quo, illum sunt debitis odit ullam consequuntur repudiandae dolorum tempora nam beatae officiis possimus voluptatem eligendi placeat. Reiciendis, iste?
+                            </div>
+                            <div>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet dictum quam. Etiam tincidunt nibh iaculis aliquam gravida. Curabitur purus enim, pulvinar vel magna sit amet, lobortis faucibus turpis. Mauris arcu lorem, varius vitae purus tempus, efficitur vulputate nisi. Fusce commodo orci sed dolor finibus, hendrerit faucibus tortor tincidunt. In hac habitasse platea dictumst. Donec in scelerisque elit, vitae hendrerit sem. Cras ut felis feugiat elit lacinia aliquet non id purus. Nullam vitae sagittis dui, vel bibendum mi. Duis tincidunt ultrices scelerisque.
+                            </div>
+
+                        </div>
+                        <div class="content">
+
+
+
+
+                            <ul>
+
+
+                                <li class="span4">
+                                    <div class="image">
+                                        <img src="../static/img/i1.jpg">
+
+                                        <div>
+                                            <h4>
+                                                <a href="http://localhost:8080/Photographer/gallery?galleryID=1">View Gallery 1</a>
+                                            </h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation. Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                        </div>
+                                    </div>
+
+                                </li>
+
+                                <li class="span4">
+                                    <div class="image">
+                                        <img src="../static/img/c1.jpg">
+
+                                        <div>
+                                            <h4>
+                                                <a href="http://localhost:8080/Photographer/gallery?galleryID=2">View Gallery 2</a>
+                                            </h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec sit amet dictum quam. Etiam tincidunt nibh iaculis aliquam gravida. Curabitur purus enim, pulvinar vel magna sit amet, lobortis faucibus turpis. Mauris arcu lorem, varius vitae purus tempus, efficitur vulputate nisi. Fusce commodo orci sed dolor finibus, hendrerit faucibus tortor tincidunt. In hac habitasse platea dictumst. Donec in scelerisque elit, vitae hendrerit sem. Cras ut felis feugiat elit lacinia aliquet non id purus. Nullam vitae sagittis dui, vel bibendum mi. Duis tincidunt ultrices scelerisque.</p>
+                                        </div>
+                                    </div>
+
+                                </li>
+
+                                <li class="span4">
+                                    <div class="image">
+                                        <img src="../static/img/img1.jpg">
+
+                                        <div>
+                                            <h4>
+                                                <a href="http://localhost:8080/Photographer/gallery?galleryID=3">View Gallery 3</a>
+                                            </h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation. </p>
+                                        </div>
+                                    </div>
+
+                                </li>
+
+
+                            </ul>
+
+
+                        </div>
+                        <div class="about">
+                            <h3>About me</h3>
+                        </div>
+                        <div class="about-detail">
+                            About me
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim
+                        </div>
+                    </div>
+                    <div class="right">
+
+
+
+
+
+
+                        <link href="../static/css/right.css" rel="stylesheet" type="text/css">
+
+
+                        <div class="header-right">
+                            <h4>Share this page</h4>
+                        </div>
+                        <div class="social">
+                            <div>
+                                <ul>
+                                    <li>
+                                        <i class="fa fa-facebook-square" style="color: white; padding-top: 2px; padding-right: 10px; vertical-align: middle;">
+                                            <a href="https://www.facebook.com/">
+                                                <span> Share on Facebook</span>
+                                            </a> </i>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-twitter-square" style="color: white; padding-top: 2px; padding-right: 10px; vertical-align: middle;"> <a href="https://twitter.com/?lang=vi"> <span>Share on Twitter</span> </a></i>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-google-plus-square" style="color: white; padding-top: 2px; padding-right: 10px; vertical-align: middle;">
+                                            <a href="https://www.google.com/"> <span>Share on Google</span>
+                                            </a> </i>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <link href="../static/css/footer.css" rel="stylesheet" type="text/css">
+        <title>JSP Page</title>
+
+
+        <div class="footer">
+            <div class="link">
+                <a href="http://localhost:8080/Photographer/#">Visited </a>
+                <span class="footer-page-counter-item">00043</span>
+            </div>
+
+        </div>
+
+
+
+
+
+
+    </body></html>

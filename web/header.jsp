@@ -24,19 +24,43 @@
                     <li> <a class="${active=="4"?"activeMenu":""}" href="contact">Contact</a> </li>
                 </ul>
             </div>
-
+            <div class="nav-container">
+                <div class="nav-btn">
+                    <button onclick="collapseNavbar()" class="dropbtn">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+                <nav id="dropdown-menu" class="nav-mobile">
+                    <div class="nav-mobile-inner">
+                        <ul class="nav-mobile-list">
+                            <li><a class="nav-mobile-link ${active=="0"?"activeMenu":""}" href="home">My front page</a></li>
+                                <c:forEach items="${top3}" var="i" >
+                                <li> <a class="nav-mobile-link ${active==i.ID?"activeMenu":""}" href="gallery?galleryID=${i.ID}">${i.name}</a> </li>
+                                </c:forEach>
+                            <li><a class="nav-mobile-link ${active=="4"?"activeMenu":""}" href="contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
         </div>
         <div class="header">
-            <div class="header-inner">
-                <div class="img"><i class="fa fa-camera-retro" style="color: white; font-size: 90px;"></i></div>
-                <!--<img rel="nofollow" src="./images/logo.png"/>-->
-                <div class="title ">
-                    PHOTOGRAPHER
-                </div>
-                <div class="subtitle">
-                    Welcome to this website
+            <div class="header-container">
+                <div class="header-inner">
+                    <div class="img"><i class="fa fa-camera-retro"></i></div>
+                    <!--<img rel="nofollow" src="./images/logo.png"/>-->
+                    <div class="title ">
+                        PHOTOGRAPHER
+                    </div>
+                    <div class="subtitle">
+                        Welcome to this website
+                    </div>
                 </div>
             </div>
         </div>
+        <script>
+            function collapseNavbar() {
+                document.getElementById('dropdown-menu').classList.toggle('show');
+            }
+        </script>
     </body>
 </html>
